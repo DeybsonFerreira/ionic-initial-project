@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-breadcrumbs mode="ios">
+    <ion-breadcrumbs>
+      <ion-breadcrumb active routerLink="/login">Login</ion-breadcrumb>
+      <ion-breadcrumb routerLink="/register">Cadastrar</ion-breadcrumb>
+    </ion-breadcrumbs>
+  </ion-breadcrumbs>
+
+  <div class="login-form">
+    <ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-input
+            [(ngModel)]="username"
+            label="Usuário"
+            placeholder="Informe um usuário"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            [(ngModel)]="password"
+            label="Senha"
+            type="password"
+            value="password"
+            placeholder="Informe uma senha"
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-list>
+
+    <p>Não tem um cadastro? <a routerLink="/register">Cadastre-se</a></p>
+    <ion-button expand="block" (click)="login()">Login</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+ion-content {
+  --background: linear-gradient(to left, #52a5b8, #8dc26f);
+}
+
+.register-form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 500px;
+  margin: 5% auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
