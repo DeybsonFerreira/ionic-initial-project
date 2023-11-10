@@ -2,8 +2,8 @@
   <ion-menu contentId="main-content" type="overlay">
     <ion-content>
       <ion-list id="inbox-list">
-        <ion-list-header>Deybson</ion-list-header>
-        <ion-note>Deybson Ferreira</ion-note>
+        <ion-list-header> {{ userInfo.fullName }}</ion-list-header>
+        <ion-note>{{ userInfo.email }}</ion-note>
 
         <ion-menu-toggle
           auto-hide="false"
@@ -42,6 +42,23 @@
       </ion-buttons>
       <ion-title size="medium">{{ title() }}</ion-title>
       <ion-buttons slot="end">App </ion-buttons>
+      <ion-buttons class="toggle-theme" (click)="toggleTheme()" slot="end">
+        <ion-icon
+          *ngIf="isDarkMode"
+          aria-hidden="true"
+          slot="start"
+          ios="moon-outline"
+          md="moon-sharp"
+        ></ion-icon>
+
+        <ion-icon
+          *ngIf="!isDarkMode"
+          aria-hidden="true"
+          slot="start"
+          ios="sunny-outline"
+          md="sunny-sharp"
+        ></ion-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 

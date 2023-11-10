@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -6,27 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  constructor() {}
-
+  constructor(private router: Router) {}
+  confirmation: boolean = false;
   public alertButtons = [
     {
       text: 'Cancel',
       role: 'cancel',
-      handler: () => {
-        console.log('Alert canceled');
-      },
     },
     {
       text: 'OK',
       role: 'confirm',
-      handler: () => {
-        console.log('Alert confirmed');
-      },
     },
   ];
 
-  setResult(event: CustomEvent) {
-    console.log(`Dismissed with role: ${event.detail.role}`);
+  confirmationRegister(event: CustomEvent) {
+    if (event.detail.role == 'confirm') {
+      this.router.navigate(['/login']);
+    }
   }
   ngOnInit() {}
 
