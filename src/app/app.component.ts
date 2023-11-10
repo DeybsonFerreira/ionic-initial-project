@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from './services/authentication.service';
-import { Router } from '@angular/router';
+import { UtilsNavigationService } from './services/utils-navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +17,17 @@ export class AppComponent {
       click: this.logout.bind(this),
     },
   ];
-  constructor(private auth: AuthenticationService) {}
+  constructor(
+    private auth: AuthenticationService,
+    private utils: UtilsNavigationService
+  ) {}
+  selectedOption: string = '';
 
   isValidMenu(): boolean {
     return this.auth.isAuthenticated();
+  }
+  title() {
+    return this.utils.getTile();
   }
 
   logout() {

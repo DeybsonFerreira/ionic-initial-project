@@ -2,6 +2,9 @@ ion-menu-button {
   color: var(--ion-color-primary);
 }
 
+ion-content {
+  --background: var(--customBackground);
+}
 #container {
   text-align: center;
   position: absolute;
