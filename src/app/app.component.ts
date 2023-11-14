@@ -20,6 +20,7 @@ export class AppComponent {
       icon: 'heart',
       click: this.logout.bind(this),
     },
+    { title: 'categoria', url: '/store', icon: 'heart', click: () => {} },
   ];
   constructor(
     private auth: AuthenticationService,
