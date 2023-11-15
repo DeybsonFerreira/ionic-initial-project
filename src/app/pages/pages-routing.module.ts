@@ -21,9 +21,9 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    // path: 'store',
-    // component: StoreComponent,
-    // canActivate: [AuthGuardService],
+    path: 'store',
+    component: StoreComponent,
+    canActivate: [AuthGuardService],
   },
 ];
 
