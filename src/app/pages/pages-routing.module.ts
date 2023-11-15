@@ -8,6 +8,7 @@ import { StoreComponent } from './store/store.component';
 import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'home',
     component: HomeComponent,

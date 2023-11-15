@@ -7,9 +7,16 @@ import { HomeComponent } from './home/home.page';
 import { PagesRoutingModule } from './pages-routing.module';
 import { RegisterComponent } from './auth/register/register.component';
 import { StoreComponent } from './store/store.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, PagesRoutingModule],
-  declarations: [LoginComponent, HomeComponent, RegisterComponent,StoreComponent],
+  declarations: [
+    LoginComponent,
+    HomeComponent,
+    RegisterComponent,
+    StoreComponent,
+    ProductComponent,
+  ],
 })
 export class PagesModule {}

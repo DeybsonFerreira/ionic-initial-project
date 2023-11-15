@@ -1,3 +1,42 @@
-<p>
-  product works!
-</p>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Meus Produtos</ion-card-title>
+      <ion-card-subtitle>Lista de Produtos</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-searchbar placeholder="Nome do Produto"></ion-searchbar>
+    <ion-grid>
+      <ion-row class="row-header">
+        <ion-col size="1"></ion-col>
+        <ion-col size="6">Nome</ion-col>
+        <ion-col size="3">Preço</ion-col>
+        <ion-col size="2">Qtd</ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let produto of produtosPorPagina">
+        <ion-col size="1">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-col>
+        <ion-col size="6">{{ produto.nome }}</ion-col>
+        <ion-col size="3">{{ produto.preco }}</ion-col>
+        <ion-col size="2">{{ produto.qtd }}</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Paginator -->
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="previousPage()" [disabled]="paginaAtual === 1">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+          Anterior
+        </ion-button>
+        <ion-button
+          (click)="nextPage()"
+          [disabled]="paginaAtual === totalPaginas"
+          >Próxima <ion-icon name="chevron-forward-outline"></ion-icon
+        ></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-card>
+</ion-content>

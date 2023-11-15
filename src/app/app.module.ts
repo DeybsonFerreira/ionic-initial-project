@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PagesModule } from './pages/pages.module';
 import { MenuComponent } from './components/menu/menu.component';
+
 const mode: any = { ios: 'ios', android: 'md' };
 @NgModule({
   declarations: [AppComponent, MenuComponent],

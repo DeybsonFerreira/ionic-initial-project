@@ -1,0 +1,15 @@
+.row-header {
+  font-weight: bold;
+  background-color: var(--ion-color-primary-tint);
+  color: var(--ion-color-primary-contrast);
+}
+
+ion-col {
+  border: solid 1px whitesmoke;
+}
+
+ion-row:hover {
+  background-color: var(--ion-color-primary-tint);
+  cursor: pointer;
+  color: var(--ion-color-primary-contrast);
+}
