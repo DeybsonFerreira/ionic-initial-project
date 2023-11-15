@@ -25,12 +25,13 @@ export class MenuComponent {
   }
 
   public appPages = [
-    { title: 'home', url: '/home', icon: 'heart', click: () => {} },
-    { title: 'loja', url: '/store', icon: 'heart', click: () => {} },
+    { title: 'home', url: '/home', icon: 'home', click: () => {} },
+    { title: 'loja', url: '/store', icon: 'bag', click: () => {} },
+    { title: 'produtos', url: '/product', icon: 'albums', click: () => {} },
     {
       title: 'sair',
       url: '/login',
-      icon: 'heart',
+      icon: 'close',
       click: this.logout.bind(this),
     },
   ];
